@@ -1,7 +1,9 @@
 import { IoTriangleSharp } from "react-icons/io5";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Image from "next/image";
 import useFetch from '@/app/components/useFetch';
 import Menu from "../components/Menu";
+import Link from "next/link";
 
 export default function Homepage() {
     const {data: classes, loading, error} = useFetch("http://localhost:4000/api/v1/classes");
@@ -38,11 +40,7 @@ export default function Homepage() {
             <div>
                 <h1>Classes for you</h1>
                 <ul>
-                    <li>
-                        {/* liste over klasser
-                            *tager efter andre sider er opstillet
-                        */}
-                    </li>
+                    <li><Link /></li>
                 </ul>
             </div>
         </div>
