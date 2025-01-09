@@ -6,23 +6,9 @@ import Menu from "../components/Menu";
 import Link from "next/link";
 
 export default function Homepage() {
-    const {data: classes, loading, error} = useFetch("http://localhost:4000/api/v1/classes");
 
-    if (loading) {
-        return (
-            <section className="text-center p-6">
-                <p>Indlæser...</p>
-            </section>
-        );
-    }
 
-    if (error) {
-        return (
-            <section className="text-center p-6">
-                <p className="text-red-500">Kunne ikke hente data. Prøv igen senere.</p>
-            </section>
-        );
-    }
+
 
     return (
         <div>
@@ -40,7 +26,7 @@ export default function Homepage() {
             <div>
                 <h1>Classes for you</h1>
                 <ul>
-                    <li><Link /></li>
+                    <li></li>
                 </ul>
             </div>
         </div>
