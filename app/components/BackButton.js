@@ -1,5 +1,6 @@
 // Taget fra en tidligere opgave
 'use client'
+
 import { IoIosArrowBack } from "react-icons/io";
 import { useRouter } from 'next/navigation';
 

@@ -1,10 +1,20 @@
-import returnButton from '../components/BackButton'
+import BackButton from "../components/BackButton"
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 
 export default function ClassDetail() {
+
     return (
         <div>
-            <returnButton />
+            <div>
+                <BackButton />
+                <HiOutlineMenuAlt3 />
+            </div>
+            <div>
+            </div>
+
         </div>
+        
+
     )
 }

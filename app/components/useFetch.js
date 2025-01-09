@@ -1,6 +1,6 @@
 // taget fra en tidligere opgave
 
-'use client'
+"use client"
 import { useEffect, useState } from "react";
 
 export default function useFetch(url){

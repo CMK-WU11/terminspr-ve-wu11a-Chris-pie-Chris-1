@@ -1,6 +1,7 @@
 import { IoTriangleSharp } from "react-icons/io5";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import useFetch from "../components/useFetch";
+import useFetch from '@/app/components/useFetch';
+import Menu from "../components/Menu";
 
 export default function Homepage() {
     const {data: classes, loading, error} = useFetch("http://localhost:4000/api/v1/classes");
@@ -27,6 +28,8 @@ export default function Homepage() {
                 <IoTriangleSharp />
                 <h1>Popular Classes</h1>
                 <HiOutlineMenuAlt3 />
+                {/* Menu skulle kunne poppe op når man klikker på burger menu ikonet */}
+                <Menu />
             </div>
             <div>
                 {/* baggrundsbillede  */}
