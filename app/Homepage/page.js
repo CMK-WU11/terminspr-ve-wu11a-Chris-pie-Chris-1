@@ -13,7 +13,7 @@ export default function Homepage() {
     return (
         <div>
             <div>
-                <IoTriangleSharp />
+                <IoTriangleSharp className="" />
                 <h1>Popular Classes</h1>
                 <HiOutlineMenuAlt3 />
                 {/* Menu skulle kunne poppe op når man klikker på burger menu ikonet */}
