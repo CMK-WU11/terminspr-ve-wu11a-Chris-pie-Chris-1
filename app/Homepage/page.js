@@ -5,10 +5,13 @@ import useFetch from '@/app/components/useFetch';
 import Menu from "../components/Menu";
 import Link from "next/link";
 
-export default function Homepage() {
+export default async function Homepage() {
 
+    // Kode brugt 
+    const classResponse = await fetch("http://localhost:4000/api/v1/classes")
 
-
+    const classData = await classResponse.json();
+    console.log(classData)
 
     return (
         <div>
@@ -25,9 +28,14 @@ export default function Homepage() {
             </div>
             <div>
                 <h1>Classes for you</h1>
-                <ul>
-                    <li></li>
-                </ul>
+                    <ul>
+                        {classData.map((classes) => (
+                            <li key={classes.className}>
+                                <img src={classes.asset.url}/>
+                                <p>{classes.className}</p>
+                            </li>
+                        ))}
+                    </ul>
             </div>
         </div>
     )
