@@ -32,7 +32,7 @@ export default async function ClassDetail() {
             <ul>
                 {classData.map((classes) => (
                     <li key={classes.className}>
-                        <img src={classes.asset.url}/>
+                        <img src={classes.asset.url} className='h-auto rounded-lg w-28 h-28'/>
                         <p>{classes.className}</p>
                     </li>
                 ))}
@@ -41,7 +41,7 @@ export default async function ClassDetail() {
             <ul>
                 {TrainerData.map((trainers) => (
                     <li key={trainers.trainerName}>
-                        <img src={trainers.asset.url} />
+                        <img src={trainers.asset.url} className="'h-auto rounded-lg w-28 h-28'" />
                         <p>{trainers.trainerName}</p>
                     </li>
                 ))}

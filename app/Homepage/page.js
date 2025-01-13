@@ -27,18 +27,20 @@ export default async function Homepage() {
                 {/* <Menu /> */}
             </div>
             <div>
-                    <div key={classData.id}>
-                        <Image src={classData[3].asset.url} width={250} height={250} alt="" className="rounded"/>
+                {/* mangler at teksten er på selve billedet */}
+                    <div key={classData.id} className="flex justify-center items-center">
+                        <p>{classData[3].className}</p>
+                        <Image src={classData[3].asset.url} width={250} height={250} alt="" className="rounded w-64 h-96"/>
                     </div>
             </div>
-            <div>
+            <div className="mt-5 ml-5">
                 {/* Kode taget fra tidligere opgave fra iPlayBadMusic4UWithPain */}
                 <h1>Classes for you</h1>
-                    <ul>
+                    <ul className="flex overflow-x-scroll p-4 w-auto">
                         {classData.map((classes) => (
-                            <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col items-center">
-                                <img src={classes.asset.url} className='w-[8em] height-[1em] h-auto rounded-lg'/>
-                                <p>{classes.className}</p>
+                            <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
+                                <img src={classes.asset.url} className='h-auto rounded-lg w-28 h-28'/>
+                                <p className="w-32">{classes.className}</p>
                             </li>
                         ))}
                     </ul>
