@@ -19,7 +19,7 @@ export default async function Homepage() {
 
     return (
         <div>
-            <div className="flex mt-6 space-x-12">
+            <div className="flex mt-6 space-x-24">
                 <IoTriangleSharp className="" />
                 <h1>Popular Classes</h1>
                 <HiOutlineMenuAlt3 />
@@ -28,7 +28,7 @@ export default async function Homepage() {
             </div>
             <div>
                     <div key={classData.id}>
-                        <Image src={classData[3].asset.url} width={250} height={250}/>
+                        <Image src={classData[3].asset.url} width={250} height={250} alt="" className="rounded"/>
                     </div>
             </div>
             <div>
