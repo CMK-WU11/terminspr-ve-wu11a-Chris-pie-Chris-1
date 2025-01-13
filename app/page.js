@@ -8,7 +8,9 @@ export default function Homepage() {
 
   return (
     <div>
-      <div className="relative h-full">
+      <div className="relative">
+        <h1 className="text-white absolute ml-5 text-3xl bottom-0 left-0">Believe Yourself</h1>
+        <h3 className="text-white absolute ml-5 text-3xl bottom-6 left-0">Train like a pro</h3>
         <Image 
           src={WelcomeBackground}
           alt="Welcome Background"
@@ -17,8 +19,6 @@ export default function Homepage() {
         />
         {/* Welcome background */}
         {/* Kig på styling efter */}
-        <h1>Believe Yourself</h1>
-        <h3>Train like a pro</h3>
       </div>
       <div className="relative h-full">
         {/* Taget fra tidligere opgave (Din mægler) */}

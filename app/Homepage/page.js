@@ -19,10 +19,10 @@ export default async function Homepage() {
 
     return (
         <div>
-            <div className="flex mt-6 space-x-24">
-                <IoTriangleSharp className="" />
+            <div className="flex mt-6 mb-6 place-content-between items-center">
+                <IoTriangleSharp className="ml-5" />
                 <h1>Popular Classes</h1>
-                <HiOutlineMenuAlt3 />
+                <HiOutlineMenuAlt3 className="mr-5"/>
                 {/* Menu som skulle kunne poppe op når man klikker på burger menu ikonet */}
                 {/* <Menu /> */}
             </div>

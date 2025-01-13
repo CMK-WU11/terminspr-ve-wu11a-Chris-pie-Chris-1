@@ -1,5 +1,7 @@
 import BackButton from "../components/BackButton"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { CiSearch } from "react-icons/ci";
+
 
 export default async function ClassDetail() {
 
@@ -16,36 +18,47 @@ export default async function ClassDetail() {
 
     return (
         <div>
-            <div>
+            <div className="flex place-content-between items-center">
                 <BackButton />
-                <HiOutlineMenuAlt3 />
+                <HiOutlineMenuAlt3 className="mr-5"/>
             </div>
-            <form>
+            <form className="m-6">
+                
+                <h2 className="text-5xl">Search</h2>
+                <br />
                 {/* search mangler ikon i sig */}
-                <input 
+                <input
+                    
+                    className="bg-[#E4E4E4] w-64 h-12 rounded p-3"
                     type="search"
                     id="searchbar"
                     placeholder="Search classes"
                 />
             </form>
-            <h1>Popular Classes</h1>
-            <ul>
-                {classData.map((classes) => (
-                    <li key={classes.className}>
-                        <img src={classes.asset.url} className='h-auto rounded-lg w-28 h-28'/>
-                        <p>{classes.className}</p>
-                    </li>
-                ))}
-            </ul>
-            <h1>Popular Trainers</h1>
-            <ul>
-                {TrainerData.map((trainers) => (
-                    <li key={trainers.trainerName}>
-                        <img src={trainers.asset.url} className="'h-auto rounded-lg w-28 h-28'" />
-                        <p>{trainers.trainerName}</p>
-                    </li>
-                ))}
-            </ul>
+            <div className="mt-5 ml-5">
+                <h1>Popular Classes</h1>
+                <ul className="flex overflow-x-scroll p-4 w-auto">
+                        {classData.map((classes) => (
+                            <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
+                                <img src={classes.asset.url} className='h-auto rounded-lg w-28 h-28'/>
+                                <p className="w-32">{classes.className}</p>
+                            </li>
+                        ))}
+                    </ul>
+
+            </div>
+            <div className="mt-5 ml-5">
+                <h1>Popular Trainers</h1>
+                <ul>
+                    {TrainerData.map((trainers) => (
+                        <li key={trainers.trainerName} className="flex mt-5">
+                            <img src={trainers.asset.url} width={30} height={30} className="'h-auto rounded-lg w-28 h-28'" />
+                            <p className="ml-5 mt-2">{trainers.trainerName}</p>
+                        </li>
+                    ))}
+                </ul>
+
+            </div>
         </div>
         
 
