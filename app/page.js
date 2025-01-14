@@ -20,7 +20,7 @@ export default function Homepage() {
         {/* Welcome background */}
         {/* Kig på styling efter */}
       </div>
-      <div className="relative h-full">
+      <div className="relative">
         {/* Taget fra tidligere opgave (Din mægler) */}
         <Image 
           src={WelcomeBackgroundCenter}
@@ -29,7 +29,8 @@ export default function Homepage() {
           quality={100}
 
         />
-          <Link 
+          <Link
+            className="absolute"
             href="/Homepage"
             >Start Training
           </Link>
