@@ -1,21 +1,21 @@
 import BackButton from "../components/BackButton"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Menu from "../components/Menu";
 
 
 export default function ClassDetail() {
 
     return (
         <div>
-            <div>
+
+            <Menu />
+            {/* <div>
                 <BackButton />
-                <HiOutlineMenuAlt3 />
             </div>
             <div>
                 <h1>My Schedule</h1>
-            </div>
+            </div> */}
 
         </div>
-        
-
     )
 }

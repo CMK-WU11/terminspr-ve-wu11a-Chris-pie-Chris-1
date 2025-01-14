@@ -1,6 +1,7 @@
 import BackButton from "../components/BackButton"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
+import Menu from "../components/Menu";
 
 
 export default async function ClassDetail() {
@@ -20,7 +21,7 @@ export default async function ClassDetail() {
         <div>
             <div className="flex place-content-between items-center">
                 <BackButton />
-                <HiOutlineMenuAlt3 className="mr-5"/>
+                <Menu />
             </div>
             <form className="m-6">
                 
@@ -40,7 +41,7 @@ export default async function ClassDetail() {
                 <ul className="flex overflow-x-scroll p-4 w-auto">
                         {classData.map((classes) => (
                             <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
-                                <img src={classes.asset.url} className='h-auto rounded-lg w-28 h-28'/>
+                                <img src={classes.asset.url} className='h-auto rounded-lg w-32 h-36'/>
                                 <p className="w-32">{classes.className}</p>
                             </li>
                         ))}
