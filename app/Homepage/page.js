@@ -22,13 +22,12 @@ export default async function Homepage() {
         <div>
             <div className="flex mt-6 mb-6 place-content-between items-center">
                 <IoTriangleSharp className="ml-5 fill-[#E4E4E4]" />
-                <h1 className="text-2xl">Popular Classes</h1>
-                <Menu />
+                <h1 className="text-2xl flex justify-center">Popular Classes</h1>
+                <Menu  />
                 {/* Menu som skulle kunne poppe op når man klikker på burger menu ikonet */}
                 {/* <Menu /> */}
             </div>
             <article className="relative">
-                {/* mangler at teksten er på selve billedet */}
                     <div key={classData.id} className="flex flex-col justify-center items-center">
                         <Image src={classData[3].asset.url} width={250} height={250} alt="" className="rounded scale-x-125 w-84 h-96"/>
                         <p className="flex absolute text-white bottom-10 left-0 ml-14 text-[50px]">{classData[3].className}</p>

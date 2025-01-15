@@ -41,7 +41,7 @@ export default async function ClassDetail() {
                 <ul className="flex overflow-x-scroll p-4 w-auto">
                         {classData.map((classes) => (
                             <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
-                                <img src={classes.asset.url} className='h-auto rounded-lg w-32 h-36'/>
+                                <img src={classes.asset.url} className='h-auto rounded-lg w-32 h-32'/>
                                 <p className="w-32">{classes.className}</p>
                             </li>
                         ))}

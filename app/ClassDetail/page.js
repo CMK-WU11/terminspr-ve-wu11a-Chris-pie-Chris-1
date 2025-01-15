@@ -1,5 +1,6 @@
 import BackButton from "../components/BackButton"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Menu from "../components/Menu";
 
 
 export default function ClassDetail() {
@@ -8,7 +9,7 @@ export default function ClassDetail() {
         <div>
             <div>
                 <BackButton />
-                <HiOutlineMenuAlt3 />
+                <Menu />
             </div>
             <div>
             </div>

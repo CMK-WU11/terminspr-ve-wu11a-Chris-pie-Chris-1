@@ -11,29 +11,31 @@ export default function Menu() {
     const [isVisibleMenu, setIsVisibleMenu] = useState(false)
 
     return (
-        <div>
-            {setIsVisibleMenu &&
+        <div className="z-10 absolute mt-12">
             <div>
                 <button
-                    onClick={() => setIsOpen(true)}
+                    onClick={() => setIsOpen(true)}                    
                 >
-                    <HiOutlineMenuAlt3 className="mr-5 fill-[#FFFFFF]"/>
+                    <HiOutlineMenuAlt3 className="mr-5 text-[#E4E4E4] w-8 h-12 relative left-80"/>
                 </button>
             </div>
-            }
+
         {isOpen &&
-        <div>
-            <button><IoIosClose onClick={() => setIsOpen(false)} /></button>
+        <div className="bg-white w-screen h-32">
+            <button><IoIosClose className="bottom-5 w-16 h-16 left-96" onClick={() => setIsOpen(false)} /></button>
             <nav>
-                <ul>
+                <ul className="flex flex-col justify-center items-center bg-white">
                     <li><Link href="/Homepage">Home</Link></li>
+                    <br />
                     <li><Link href="/Search">Search</Link></li>
+                    <br />
+                    {/* My Schedules mangler, if else */}
                     <li><button onClick={() => setLogonOpen(true)}>Log on</button></li>
                 </ul>
                 {/* mangler en open og close log ind del */}
                 {logonOpen &&
                 <div>
-                    <form action="">
+                    <form action="" className="flex flex-col justify-center items-center bg-white">
                         <label htmlFor="username">Username</label>
                         <input id="username" type="text" placeholder="Enter username" />
                         <label htmlFor="password">Password</label>
