@@ -18,11 +18,14 @@ export default async function Homepage() {
     const singleClassData = await singleClassResponse.json();
     console.log(singleClassData)
 
+    // Koden er taget fra en tidligere opgave, Din-Mæglere
+    const randomClasses = classData.sort(() => 0.5 - Math.random()).slice(0,4)
+
     return (
         <div>
             <div className="flex mt-6 mb-6 place-content-between items-center">
                 <IoTriangleSharp className="ml-5 fill-[#E4E4E4]" />
-                <h1 className="text-2xl flex justify-center">Popular Classes</h1>
+                <h1 className="text-2xl flex justify-center text-center">Popular Classes</h1>
                 <Menu  />
                 {/* Menu som skulle kunne poppe op når man klikker på burger menu ikonet */}
                 {/* <Menu /> */}
@@ -39,7 +42,7 @@ export default async function Homepage() {
                     <ul className="flex overflow-x-scroll p-4 w-auto">
                         {classData.map((classes) => (
                             <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
-                                <img src={classes.asset.url} className='h-auto rounded-lg w-32 h-36'/>
+                                <img src={classes.asset.url} className='rounded-lg w-32 h-36'/>
                                 <p className="w-32">{classes.className}</p>
                             </li>
                         ))}

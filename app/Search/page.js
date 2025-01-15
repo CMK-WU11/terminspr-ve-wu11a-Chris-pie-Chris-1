@@ -17,6 +17,10 @@ export default async function ClassDetail() {
         const TrainerData = await TrainerResponse.json();
         console.log(TrainerData)
 
+        // Koden er taget fra en tidligere opgave, Din-Mæglere
+        const randomClasses = classData.sort(() => 0.5 - Math.random()).slice(0,4)
+        const randomTrainers = TrainerData.sort(() => 0.5 - Math.random()).slice(0,3)
+
     return (
         <div>
             <div className="flex place-content-between items-center">
@@ -41,7 +45,7 @@ export default async function ClassDetail() {
                 <ul className="flex overflow-x-scroll p-4 w-auto">
                         {classData.map((classes) => (
                             <li key={classes.className} className="min-w-[150px] h-[15m] flex-shrink-0 flex flex-col">
-                                <img src={classes.asset.url} className='h-auto rounded-lg w-32 h-32'/>
+                                <img src={classes.asset.url} className=' rounded-lg w-32 h-36'/>
                                 <p className="w-32">{classes.className}</p>
                             </li>
                         ))}
