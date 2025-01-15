@@ -40,9 +40,7 @@ export default function Menu() {
                         <input id="password" type="password" placeholder="Enter password" />
                         <button>Sign in</button>
                     </form>
-
                 </div>
-                
             }
             </nav>
         </div>
